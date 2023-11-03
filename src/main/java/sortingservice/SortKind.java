@@ -9,19 +9,19 @@ package sortingservice;
  */
 public enum SortKind  {
     /**
-     * Selection sort
+     * Selection sort.
      */
     SELECTION,
     /**
-     * Insertion sort
+     * Insertion sort.
      */
     INSERTION,
     /**
-     * Quick sort
+     * Quick sort.
      */
     QUICK,
     /**
-     * Heap sort
+     * Heap sort.
      */
     HEAP;
 }

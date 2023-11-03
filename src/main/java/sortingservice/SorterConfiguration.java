@@ -3,6 +3,7 @@ package sortingservice;
 import java.util.Comparator;
 
 /**
+ * Configuration for a specific sorter.
  *
  * @author Richard van den Ham (r.vandenham@fontys.nl)
  */

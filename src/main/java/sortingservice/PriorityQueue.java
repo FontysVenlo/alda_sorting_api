@@ -4,6 +4,7 @@ import java.util.Comparator;
 import java.util.Iterator;
 
 /**
+ * Priority queue used by the Heap sorter.
  *
  * @author Richard van den Ham (r.vandenham@fontys.nl)
  * @param <E> Type of elements in Priority Queue
@@ -21,7 +22,7 @@ public interface PriorityQueue<E> extends Queue<E> {
     E get();
 
     /**
-     * Get the comparator used to compare elements
+     * Get the comparator used to compare elements.
      * @return comparator
      */
     Comparator<E> getComparator();

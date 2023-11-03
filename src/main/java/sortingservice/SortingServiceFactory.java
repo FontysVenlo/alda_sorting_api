@@ -13,8 +13,9 @@ import java.util.stream.Stream;
 public interface SortingServiceFactory {
 
     /**
-     * 
-     * @return a stream of all sorter configurations that should be tested.
+     * Get all sorter configurations that should be tested.
+     *
+     * @return a stream of sorter configurations that should be tested.
      */
     Stream<SorterConfiguration> streamSorterConfigurations();
 }
