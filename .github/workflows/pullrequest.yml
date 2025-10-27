@@ -5,5 +5,5 @@ on:
     branches: [ main ]
 
 jobs:
-  test:
+  build:
     uses: FontysVenlo/alda_api_workflows/.github/workflows/pullrequest.yml@main
