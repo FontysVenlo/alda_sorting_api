@@ -6,12 +6,11 @@
     <parent>
         <groupId>io.github.fontysvenlo</groupId>
         <artifactId>informaticspom</artifactId>
-        <version>1.2</version>
+        <version>1.7</version>
         <relativePath/>
     </parent>
-    <groupId>io.github.fontysvenlo.alda</groupId>
-    <artifactId>sorting_api</artifactId>
-    <version>1.0.0</version>
+    <artifactId>alda_sorting_api</artifactId>
+    <version>1.1.0</version>
     <packaging>jar</packaging>
     <name>Sorting Service API</name>
     <properties>
