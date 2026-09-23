@@ -1,6 +1,6 @@
 # ALDA Sorting API
 
-This repository houses the API source code of of the sorting exercise.
+This repository houses the API source code of the sorting exercise.
 
 The JavaDoc can be found at [https://fontysvenlo.github.io/alda_sorting_api/latest](https://fontysvenlo.github.io/alda_sorting_api/latest)
 
