@@ -3,19 +3,20 @@ package sortingservice;
 import java.util.stream.Stream;
 
 /**
- * Factory service for sorter configurations to test.
+ * Factory service for sorter configurations.
  *
- * Provides The implementing class provides sorter configurations that a
- * student wants to be tested by the teacher tests.
+ * The implementing class provides all sorter configurations that a student
+ * implemented. Whether the teacher tests test a configuration is decided by
+ * {@link SorterConfiguration#applyTeacherTests()}.
  *
  * @author Pieter van den Hombergh / Richard van den Ham.
  */
 public interface SortingServiceFactory {
 
     /**
-     * Get all sorter configurations that should be tested.
+     * Get all configured sorter configurations.
      *
-     * @return a stream of sorter configurations that should be tested.
+     * @return a stream of all configured sorter configurations.
      */
     Stream<SorterConfiguration> streamSorterConfigurations();
 }

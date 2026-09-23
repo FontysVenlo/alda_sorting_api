@@ -49,4 +49,15 @@ public interface SorterConfiguration {
      * @return sorter
      */
     <T> Sorter<T> getSorter();
+
+    /**
+     * Indicates whether the teacher tests should test this configuration.
+     * Your own tests should test all configurations.
+     *
+     * @return true if the teacher tests should test this configuration,
+     * true by default.
+     */
+    default boolean applyTeacherTests() {
+        return true;
+    }
 }

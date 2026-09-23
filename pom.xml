@@ -10,7 +10,7 @@
         <relativePath/>
     </parent>
     <artifactId>alda_sorting_api</artifactId>
-    <version>1.1.0</version>
+    <version>1.2.0</version>
     <packaging>jar</packaging>
     <name>Sorting Service API</name>
     <properties>
