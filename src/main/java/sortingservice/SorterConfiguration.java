@@ -51,6 +51,24 @@ public interface SorterConfiguration {
     <T> Sorter<T> getSorter();
 
     /**
+     * Indicates whether this sorter uses a key sorter.
+     * @return true if configuration uses key sorter, false by default.
+     */
+    default boolean usesKeySorter() {
+        return false;
+    }
+
+    /**
+     * Get a key sorter.
+     * @param <T> the type of elements in the queue
+     * @return key sorter or null if configuration does not use a key sorter,
+     * null by default.
+     */
+    default <T> KeySorter<T> getKeySorter() {
+        return null;
+    }
+
+    /**
      * Indicates whether the teacher tests should test this configuration.
      * Your own tests should test all configurations.
      *

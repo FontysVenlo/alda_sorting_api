@@ -23,5 +23,9 @@ public enum SortKind  {
     /**
      * Heap sort.
      */
-    HEAP;
+    HEAP,
+    /**
+     * Radix sort.
+     */
+    RADIX;
 }
