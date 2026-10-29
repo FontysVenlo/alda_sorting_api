@@ -30,7 +30,8 @@ public interface SorterConfiguration {
     /**
      * Get queue for sorter.
      * @param <T> the type of elements in the queue
-     * @return queue for sorter
+     * @return queue for sorter, or null if configuration uses a priority
+     * queue (see {@link #getPriorityQueue(Comparator)}).
      */
     <T> Queue<T> getQueue();
 
@@ -44,11 +45,32 @@ public interface SorterConfiguration {
     <T> PriorityQueue<T> getPriorityQueue(Comparator<T> comparator);
 
     /**
-     * Get a sorter. 
+     * Get a sorter.
+     * A configuration that uses a priority queue returns a sorter that
+     * returns the queue as is, since the priority queue sorts by itself.
      * @param <T> the type of elements in the queue
-     * @return sorter
+     * @return sorter, or null if configuration uses a key sorter (see
+     * {@link #getKeySorter()}).
      */
     <T> Sorter<T> getSorter();
+
+    /**
+     * Indicates whether this sorter uses a key sorter.
+     * @return true if configuration uses key sorter, false by default.
+     */
+    default boolean usesKeySorter() {
+        return false;
+    }
+
+    /**
+     * Get a key sorter.
+     * @param <T> the type of elements in the queue
+     * @return key sorter or null if configuration does not use a key sorter,
+     * null by default.
+     */
+    default <T> KeySorter<T> getKeySorter() {
+        return null;
+    }
 
     /**
      * Indicates whether the teacher tests should test this configuration.
