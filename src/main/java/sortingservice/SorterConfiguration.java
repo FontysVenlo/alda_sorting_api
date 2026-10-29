@@ -30,7 +30,8 @@ public interface SorterConfiguration {
     /**
      * Get queue for sorter.
      * @param <T> the type of elements in the queue
-     * @return queue for sorter
+     * @return queue for sorter, or null if configuration uses a priority
+     * queue (see {@link #getPriorityQueue(Comparator)}).
      */
     <T> Queue<T> getQueue();
 
@@ -44,9 +45,12 @@ public interface SorterConfiguration {
     <T> PriorityQueue<T> getPriorityQueue(Comparator<T> comparator);
 
     /**
-     * Get a sorter. 
+     * Get a sorter.
+     * A configuration that uses a priority queue returns a sorter that
+     * returns the queue as is, since the priority queue sorts by itself.
      * @param <T> the type of elements in the queue
-     * @return sorter
+     * @return sorter, or null if configuration uses a key sorter (see
+     * {@link #getKeySorter()}).
      */
     <T> Sorter<T> getSorter();
 
